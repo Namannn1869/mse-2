@@ -1,0 +1,18 @@
+naman@meowwwww:~$ cd ~
+naman@meowwwww:~$ touch index.html
+naman@meowwwww:~$ echo "<html><body><h1>Hello World</h1></body></html>" > index.html
+naman@meowwwww:~$ ls -l index.html
+-rw-r--r-- 1 naman naman 47 Apr 24 05:14 index.html
+naman@meowwwww:~$ chmod 777 index.html
+naman@meowwwww:~$ ls -l index.html
+-rwxrwxrwx 1 naman naman 47 Apr 24 05:14 index.html
+naman@meowwwww:~$ sudo chown www-data:www-data index.html
+[sudo] password for naman:
+naman@meowwwww:~$ chmod 755 index.html
+chmod: changing permissions of 'index.html': Operation not permitted
+naman@meowwwww:~$ ls -l index.html
+-rwxrwxrwx 1 www-data www-data 47 Apr 24 05:14 index.html
+naman@meowwwww:~$ sudo chmod 755 index.html
+naman@meowwwww:~$ ls -l index.html
+-rwxr-xr-x 1 www-data www-data 47 Apr 24 05:14 index.html
+naman@meowwwww:~$
