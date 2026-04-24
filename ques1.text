@@ -1,0 +1,35 @@
+naman@meowwwww:~$ whoami
+naman
+naman@meowwwww:~$ who
+naman    pts/1        2026-04-24 04:39
+naman@meowwwww:~$ last
+reboot   system boot  6.6.87.2-microso Fri Apr 24 04:39   still running
+reboot   system boot  6.6.87.2-microso Thu Apr 23 20:43   still running
+reboot   system boot  6.6.87.2-microso Thu Apr 23 19:29 - 20:41  (01:11)
+
+wtmp begins Thu Apr 23 19:29:44 2026
+naman@meowwwww:~$ uname -a
+Linux meowwwww 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+naman@meowwwww:~$ hostname
+meowwwww
+naman@meowwwww:~$ uptime
+ 04:42:16 up 3 min,  1 user,  load average: 0.02, 0.05, 0.01
+naman@meowwwww:~$ sudo groupadd developers
+[sudo] password for naman:
+Sorry, try again.
+[sudo] password for naman:
+Sorry, try again.
+[sudo] password for naman:
+naman@meowwwww:~$ sudo groupadd qa
+naman@meowwwww:~$ sudo useradd -m -G developers aman
+naman@meowwwww:~$ sudo useradd -m -G developers ritu
+naman@meowwwww:~$ sudo useradd -m -G qa karan
+naman@meowwwww:~$ id aman
+uid=1001(aman) gid=1004(aman) groups=1004(aman),1002(developers)
+naman@meowwwww:~$ id ritu
+uid=1002(ritu) gid=1005(ritu) groups=1005(ritu),1002(developers)
+naman@meowwwww:~$ id karan
+uid=1003(karan) gid=1006(karan) groups=1006(karan),1003(qa)
+naman@meowwwww:~$ who | grep ritu
+naman@meowwwww:~$ sudo userdel -r ritu
+userdel: ritu mail spool (/var/mail/ritu) not found
